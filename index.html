@@ -7,7 +7,7 @@
 		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/white.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -24,8 +24,25 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+						<section data-external="slides/0_introduction/0_cover.html"></section>
+						<section data-external="slides/0_introduction/1_aboutme.html"></section>
+						<section data-external="slides/0_introduction/2_slides.html"></section>
+						<section data-external="slides/0_introduction/3_resources.html"></section>
+				</section>
+				<section>
+					<section data-external="slides/1_whatis/slide-0.html"></section>
+					<section data-external="slides/1_whatis/slide-1.html"></section>
+					<section data-external="slides/1_whatis/slide-2.html"></section>
+					<section data-external="slides/1_whatis/slide-3.html"></section>
+				</section>
+				<section>
+					<section data-external="slides/2_how/0.html"></section>
+					<section data-external="slides/2_how/1.html"></section>
+					<section data-external="slides/2_how/2.html"></section>
+					<section data-external="slides/2_how/3.html"></section>
+					<section data-external="slides/2_how/4.html"></section>
+				</section>
 			</div>
 		</div>
 
@@ -41,8 +58,18 @@
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ 
+						src: 'plugin/external/external.js', 
+						condition: function() { 
+								return !!document.querySelector( '[data-external],[data-external-replace]' ); 
+						} 
+					},
+				],
+				// Display a presentation progress bar
+				progress: true,
+				// Push each slide change to the browser history
+				history: true,
 			});
 		</script>
 	</body>
