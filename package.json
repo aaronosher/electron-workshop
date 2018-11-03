@@ -1,18 +1,28 @@
 {
-  "name": "electron-workshop-resources",
+  "name": "jaccobshack-live",
   "version": "1.0.0",
   "description": "Resources for the electron workshop by aaronosher",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
   },
   "keywords": [
     "electron",
     "workshop"
   ],
   "author": "Aaron Osher <aaron@aaronosher.io>",
+  "build": {
+    "appId": "your.id",
+    "mac": {
+      "category": "your.app.category.type"
+    }
+  },
   "license": "MIT",
   "devDependencies": {
-    "electron": "^3.0.4"
+    "electron": "^3.0.4",
+    "electron-builder": "^20.31.2"
   }
 }

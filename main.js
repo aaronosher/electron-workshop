@@ -1,18 +1,20 @@
 
 // Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron');
-require('./js/demos');
+const {app, BrowserWindow, Tray} = require('electron');
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
+let appIcon = null;
 
 const createWindow = () => {
+  // Set App Icon
+
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600});
+  mainWindow = new BrowserWindow({width: 1024, height: 768});
 
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html');
+  mainWindow.loadURL('https://jhack.live');
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
