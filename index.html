@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link href="./css/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    <h2>This is your first electron application</h2>
+    <!-- All of the Node.js APIs are available in this renderer process. -->
+    We are using Node.js <script>document.write(process.versions.node)</script>,
+    Chromium <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script>.
+
+    <hr />
+    <p>
+      <button onclick="onClickMeButton()">Click me!</button>
+      <span id="clickMeResponse"></span>
+    </p>
+    <p>
+      <button onclick="showAllert()">Alert!</button>
+    </p>
+    <p>
+      <i>Press Ctrl/Cmd + l</i>
+      <span id="keyMessage"></span>
+    </p>
+
+    <script>
+      // You can also require other files to run in this process
+      require('./js/renderer.js');
+    </script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

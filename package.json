@@ -2,14 +2,17 @@
   "name": "electron-workshop-resources",
   "version": "1.0.0",
   "description": "Resources for the electron workshop by aaronosher",
-  "main": "app.js",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ."
   },
   "keywords": [
     "electron",
     "workshop"
   ],
   "author": "Aaron Osher <aaron@aaronosher.io>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^3.0.4"
+  }
 }
